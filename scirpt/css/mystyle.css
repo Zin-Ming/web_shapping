@@ -445,10 +445,71 @@ footer
 .contact_main
 {
 	width: 100%;
-	height: 80%;
 	background-color: antiquewhite;
+	text-align: center;
+	padding: 5% 0%;
 }
 
+.contact_main > h2
+{
+	margin: 0px auto 50px auto;
+}
+
+.contact_span
+{
+	width: 40%;
+	height: 1px;
+	background-color: gray;
+	margin: 5px auto;
+}
+
+
+.contact_form
+{
+	width: 60%;
+	margin: auto;
+	padding: 20px 0px;
+}
+
+.contact_form_input
+{
+	width: 50%;
+	display: block;
+	margin: 5% auto;
+	padding: 20px 5px;
+	background-color:#1B1B1B;
+	border: 3px solid #1B1B1B;
+	outline: none;
+	color: aliceblue;
+	transition: all 0.5s ease-out;
+}
+
+.contact_form_input:focus
+{
+	border: 3px solid #BBBBBB;
+}
+
+textarea.contact_form_input
+{
+	resize: none;
+	height: 120px;
+}
+
+.contect_form_submit
+{
+	color: gray;
+	border: 0px;
+	padding: 10px 50px;
+	background-color:#1B1B1B; 
+	border-radius: 20px;
+	transition: all 0.5s ease-out;
+}
+
+.contect_form_submit:hover
+{
+	background-color: silver;
+	transform: scale(1.1);
+}
 
 
 @media screen and (max-width:700px)
