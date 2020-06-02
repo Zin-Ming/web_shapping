@@ -406,9 +406,9 @@ footer
 
 .about_main03_img_span
 {
-	width: 2px;
+	width: 1px;
 	height: 200px;
-	background-color: aliceblue;
+	background-color: gray;
 	margin: auto 20px;
 }
 
