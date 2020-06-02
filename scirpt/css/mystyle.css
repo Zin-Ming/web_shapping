@@ -52,7 +52,6 @@ html , body
 	width: 100%;
 	background-color: antiquewhite;
 	padding-bottom: 10%;
-	clear: none;
 }
 
 .main01_title
@@ -125,7 +124,7 @@ html , body
 {
 	position: absolute;
 	width: 40%;
-	padding: 0% 5%;
+	padding: 0% 10% 0% 2%;
 	margin-top: 18%;
 	margin-left: 40%;
 	background-color:antiquewhite;
@@ -137,6 +136,17 @@ html , body
 	padding: 10px 5px;
 	font-size: 14px;
 }
+
+.main02_line
+{
+	position: absolute;
+	width: 30%;
+	height: 3px;
+	background-color:bisque;
+	left: 0;
+	transform: translateY(-15px);
+}
+
 
 .main03
 {
