@@ -240,6 +240,7 @@ footer
 
 .footer_content > a 
 {
+	font-size: 14px;
 	color: gray;
 	padding: 20px 0px;
 	transition: all 0.5s ease-out;
@@ -260,6 +261,7 @@ footer
 
 .footer_address > p
 {
+	font-size: 14px;
 	padding: 20px 0px;
 }
 
