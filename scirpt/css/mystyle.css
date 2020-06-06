@@ -74,6 +74,7 @@ a
 	width: 100%;
 	background-color: antiquewhite;
 	padding-bottom: 10%;
+	color: gray;
 }
 
 .main01_title
@@ -131,6 +132,7 @@ a
 	width: 100%;
 	background-color:bisque;
 	height: 100%;
+	color: gray;
 }
 
 .main02_img
@@ -177,6 +179,7 @@ a
 	width: 100%;
 	height: 80%;
 	background-color: antiquewhite;
+	color: gray;
 }
 
 .main03_img
@@ -445,9 +448,10 @@ footer
 .contact_main01
 {
 	width: 100%;
-	background-color: antiquewhite;
+	background-color:#171717;
 	text-align: center;
 	padding-bottom: 10%;
+	color: gray;
 }
 
 .contact_main01 > h2
@@ -495,6 +499,7 @@ footer
 	background-color: antiquewhite;
 	text-align: center;
 	padding: 5% 0%;
+	color: gray;
 }
 
 .contact_main02 > h2
