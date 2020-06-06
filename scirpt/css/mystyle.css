@@ -404,7 +404,7 @@ footer
 	margin-bottom: 5%;
 }
 
-.about_main03_img_span
+.span
 {
 	width: 1px;
 	height: 200px;
@@ -442,7 +442,54 @@ footer
 	line-height: 20px;
 }
 
-.contact_main
+.contact_main01
+{
+	width: 100%;
+	background-color: antiquewhite;
+	text-align: center;
+	padding-bottom: 10%;
+}
+
+.contact_main01 > h2
+{
+	padding: 5% 0%;;
+}
+
+.contact_main01_card_div
+{
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.contact_main01_card_img
+{
+	width: 40%;
+	height: 40%;
+	background-color: aqua;
+	margin:20px auto;
+	padding-top: 50px;
+}
+
+.contact_main01_card > h2
+{
+	font-size: 16px;
+	padding: 20px 5px;
+}
+
+.contact_main01_card > p
+{
+	font-size: 12px;
+	width: 50%;
+	padding-bottom: 20px;
+	margin: 0px auto;
+}
+
+
+
+
+.contact_main02
 {
 	width: 100%;
 	background-color: antiquewhite;
@@ -450,7 +497,7 @@ footer
 	padding: 5% 0%;
 }
 
-.contact_main > h2
+.contact_main02 > h2
 {
 	margin: 0px auto 50px auto;
 }
@@ -466,7 +513,7 @@ footer
 
 .contact_form
 {
-	width: 60%;
+	width: 70%;
 	margin: auto;
 	padding: 20px 0px;
 }
