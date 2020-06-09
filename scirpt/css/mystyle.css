@@ -5,11 +5,15 @@ html , body
 {
 	margin: 0;
 	font-family:Verdana, Geneva, sans-serif;
-	background-color:#171717;
 	width: 100%;
 	height: 100%;
 	letter-spacing: 3px;
 	word-wrap: break-word;
+}
+
+p
+{
+	font-size: 12px;
 }
 
 a
@@ -51,20 +55,88 @@ a
 	transform: scale(1.2);
 }
 
-.banner
+.banner_show
 {
 	position: relative;
 	width: 100%;
-	background-color:#111111;
-	padding: 5% 0%;
+	overflow: hidden;
+	
 }
 
-.banner_bg
+.banner_label
 {
 	width: 100%;
-	height: 600px;
-	background: cover;
-	background-color: bisque;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	transform: translateY(-50px);
+}
+
+.banner_label_bar
+{
+	width: 50px;
+	height: 10px;
+	border: 2px solid gray;
+	margin: 0px 10px;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+
+.banner_label_bar:hover
+{
+	background-color: gray;
+}
+
+input[name="r"]
+{
+	position: absolute;
+	visibility: hidden;
+}
+
+
+.banner
+{
+	width: 500%;
+	height: 100%;
+	display: flex;
+	background-color: #181818;
+}
+
+.banner_img
+{
+	width: 20%;
+	transition: all 0.6s ease-out;
+}
+
+.banner_img img
+{
+	width: 100%;
+	
+}
+
+#r1:checked ~ .s1
+{
+	margin-left: 0;
+}
+
+#r2:checked ~ .s1
+{
+	margin-left: -20%;
+}
+
+#r3:checked ~ .s1
+{
+	margin-left: -40%;
+}
+
+#r4:checked ~ .s1
+{
+	margin-left: -60%;
+}
+
+#r5:checked ~ .s1
+{
+	margin-left: -80%;
 }
 
 .main01
@@ -72,7 +144,7 @@ a
 	margin-top:-20px;
 	position: relative;
 	width: 100%;
-	background-color: antiquewhite;
+	background-color: #E2E2E2;
 	padding-bottom: 10%;
 	color: gray;
 }
@@ -82,103 +154,94 @@ a
 	padding-top: 10%;
 	width: 100%;
 	text-align: center;
+	margin: 0px;
 }
 
-.main_card_div
+.main01_text
 {
-	display: flex;
-	justify-content: space-around;
-	padding: 5% 5%;
-}
-
-.main01_card
-{ 
-	width: 30%;
-	margin: 10px auto;
+	width: 50%;
 	text-align: center;
-}
-
-.card_img
-{
-	width: 200px;
-	height: 200px;
-	background-color: azure;
-	margin: 10px auto;
+	padding: 5% 5% 10% 5%;
+	margin: 0px auto;
 }
 
 
-.card_title
-{
-	padding: 10% 5px;
-	font-size: 18px;
-}
-
-
-.card_p
-{
-	padding: 0px 10%;
-	font-size: 14px;
-}
-
-.text
+.main01_To_02
 {
 	position: absolute;
-	width: 50%;
+	width: 100%;
+	height: 30%;
+	z-index: 100;
+	background-color: #171717;
 }
+
 
 .main02
 {
+	margin: 0;
 	position: relative;
 	width: 100%;
-	background-color:bisque;
+	background-color: #E2E2E2;
 	height: 100%;
 	color: gray;
 }
 
 .main02_img
 {
+	width: 50%;
+	height: 100%;
 	position: absolute;
-	width: 40%;
-	height: 80%;
-	background-color: black;
-	left: 10%;
-	margin-top: 5%;
+	background-image: url(../../img/index/index_img01.png);
+	background-position: 35% 80%;
+	background-size:auto;
+
 }
 
 .main02_text_div
 {
 	position: absolute;
-	width: 40%;
-	padding: 0% 10% 0% 2%;
-	margin-top: 20%;
-	margin-left: 40%;
-	background-color:antiquewhite;
+	width: 30%;
+	padding: 0% 5% 0% 5%;
+	margin-top: 10%;
+	margin-left: 50%;
+	
 }
 
 .main02_text_div > p 
 {
 	line-height: 20px;
 	padding: 10px 5px;
-	font-size: 14px;
 }
 
 .main02_line
 {
 	position: absolute;
-	width: 30%;
+	width: 70%;
 	height: 3px;
-	background-color:bisque;
+	background-color:white;
 	left: 0;
 	transform: translateY(-15px);
+}
+
+.main02_To_03
+{
+	top: 90%;
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color:#171717;
+	z-index: 100;
+	
 }
 
 
 .main03
 {
+	margin-top: 10%;
 	position: relative;
 	width: 100%;
 	height: 80%;
-	background-color: antiquewhite;
+	background-color: #E2E2E2;
 	color: gray;
 }
 
@@ -187,15 +250,17 @@ a
 	position: absolute;
 	width: 40%;
 	height: 100%;
-	background-color: black;
 	left: 53%;
+	background-image: url(../../img/index/index_img02.png);
+	background-position: 40% 0;
+	background-size: cover;
 }
 
 .main03_text_div
 {
-	padding: 5% 10% 5% 0%;
+	padding: 5% 10% 5% 5%;
 	position: absolute;
-	width: 40%;
+	width: 30%;
 	margin-top: 5%;
 	left: 5%;
 }
@@ -313,15 +378,16 @@ footer
 	position: relative;
 	width: 100%;
 	padding: 50px 0px 50px 0px;
-	background-color: antiquewhite;
+	background-color: #E2E2E2;
 }
 
 .about_main01_img
 {
 	width: 90%;
 	height: 300px;
-	background-color: aliceblue;
 	margin: 5% auto ;
+	background-image: url(../../img/about/about-img01.jpg);
+	background-size: cover;
 }
 
 .about_main01_text_div
@@ -330,6 +396,7 @@ footer
 	width: 90%;
 	padding: 0px 20px;
 	text-align: center;
+	margin-bottom: 10%;
 }
 
 .about_main01_text_div > h2
@@ -355,7 +422,7 @@ footer
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: antiquewhite;
+	background-color:#171717;
 	padding-top: 50px;
 }
 
@@ -372,7 +439,8 @@ footer
 {
 	width: 40%;
 	height: 500px;
-	background-color: aqua;
+	background-image: url(../../img/about/about-img02.jpg);
+	background-size: cover;
 }
 
 .about_main02_text_div
@@ -380,7 +448,6 @@ footer
 	color: gray;
 	width: 50%;
 	padding: 60px 30px;
-	background-color: #F1D2B7;
 	font-size: 18px;
 }
 
@@ -394,18 +461,11 @@ footer
 {
 	position: relative;
 	width: 100%;
-	padding-top: 50px;
-	background-color: antiquewhite;
+	background-color:#f9f3f3;
+	padding-top: 10%;;
 	padding-bottom: 10%;
 }
 
-.about_main03_img_div
-{
-	padding-top: 10%;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 5%;
-}
 
 .span
 {
@@ -418,9 +478,12 @@ footer
 
 .about_main03_img
 {
-	width: 20%;
+	width: 50%;
 	height: 300px;
-	background-color: aqua;
+	margin: 5% auto;
+	background-image: url(../../img/about/about-img03.png);
+	background-size: cover;
+	background-position: 0% 50%;
 }
 
 .about_main03_text_div
@@ -447,11 +510,12 @@ footer
 
 .contact_main01
 {
+	position: relative;
 	width: 100%;
-	background-color:#171717;
+	background-color: #181818;
 	text-align: center;
-	padding-bottom: 20%;
 	color: gray;
+	margin-top: -20px;
 }
 
 .contact_main01 > h2
@@ -465,6 +529,7 @@ footer
 	justify-content: space-around;
 	width: 80%;
 	margin: 0 auto;
+	padding-bottom: 20%;
 }
 
 .contact_main01_card_img
@@ -496,7 +561,7 @@ footer
 .contact_main02
 {
 	width: 100%;
-	background-color: antiquewhite;
+	background-color: #E2E2E2;
 	text-align: center;
 	padding: 5% 0%;
 	color: gray;
@@ -590,6 +655,3 @@ textarea.contact_form_input
 		display: block;
 	}
 }
-
-
-
