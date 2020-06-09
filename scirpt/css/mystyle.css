@@ -60,6 +60,8 @@ a
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	padding: 50px 0px;
+	background-color: #171717;
 	
 }
 
@@ -141,7 +143,6 @@ input[name="r"]
 
 .main01
 {
-	margin-top:-20px;
 	position: relative;
 	width: 100%;
 	background-color: #E2E2E2;
@@ -151,7 +152,7 @@ input[name="r"]
 
 .main01_title
 {
-	padding-top: 10%;
+	padding-top: 15%;
 	width: 100%;
 	text-align: center;
 	margin: 0px;
@@ -161,7 +162,7 @@ input[name="r"]
 {
 	width: 50%;
 	text-align: center;
-	padding: 5% 5% 10% 5%;
+	padding: 10% 5% 20% 5%;
 	margin: 0px auto;
 }
 
@@ -181,9 +182,11 @@ input[name="r"]
 	margin: 0;
 	position: relative;
 	width: 100%;
-	background-color: #E2E2E2;
+	background-color: #171717;
 	height: 100%;
 	color: gray;
+	padding-bottom: 15%;
+
 }
 
 .main02_img
@@ -191,9 +194,9 @@ input[name="r"]
 	width: 50%;
 	height: 100%;
 	position: absolute;
-	background-image: url(../../img/index/index_img01.png);
-	background-position: 35% 80%;
-	background-size:auto;
+	background-image: url(../../img/index/index_img02.png);
+	background-position:40% 20%;
+	background-size:cover;
 
 }
 
@@ -202,7 +205,7 @@ input[name="r"]
 	position: absolute;
 	width: 30%;
 	padding: 0% 5% 0% 5%;
-	margin-top: 10%;
+	margin-top: 15%;
 	margin-left: 50%;
 	
 }
@@ -240,7 +243,7 @@ input[name="r"]
 	margin-top: 10%;
 	position: relative;
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	background-color: #E2E2E2;
 	color: gray;
 }
@@ -251,8 +254,8 @@ input[name="r"]
 	width: 40%;
 	height: 100%;
 	left: 53%;
-	background-image: url(../../img/index/index_img02.png);
-	background-position: 40% 0;
+	background-image: url(../../img/index/index_img01.png);
+	background-position: 40% 0%;
 	background-size: cover;
 }
 
