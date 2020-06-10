@@ -18,66 +18,11 @@
 			<a href="Contact.html">Contact</a>
 			</div>	
 	</div>
-		<div class="banner_show">
-			<div class="banner">
-				<input type="radio" name="r" id="r1">
-				<input type="radio" name="r" id="r2">
-				<input type="radio" name="r" id="r3">
-				<input type="radio" name="r" id="r4">
-				<input type="radio" name="r" id="r5">
-				<div class="banner_img s1">
-					<img src="img/index/banner/banner_img01.jpg" width="100%" alt=""/>
-				</div>
-				<div class="banner_img">
-					<img src="img/index/banner/banner_img02.jpg" width="100%" alt=""/>
-				</div>
-				<div class="banner_img">
-					<img src="img/index/banner/banner_img03.jpg" width="100%" alt=""/>
-				</div>
-				<div class="banner_img">
-					<img src="img/index/banner/banner_img04.jpg" width="100%" alt=""/>
-				</div>
-				<div class="banner_img">
-					<img src="img/index/banner/banner_img05.jpg" width="100%" alt=""/>
-				</div>
-			</div>
-			<div class="banner_label">
-				<label for="r1" class="banner_label_bar"></label>
-				<label for="r2" class="banner_label_bar"></label>
-				<label for="r3" class="banner_label_bar"></label>
-				<label for="r4" class="banner_label_bar"></label>
-				<label for="r5" class="banner_label_bar"></label>
-			</div>
+	<div class="shap">
+		<div class="shap_main">
+			<div v-for="(item , index) in list" :key="itme.id"></div>
 		</div>
-		<div class="main01">
-			<h2 class="main01_title">What is Lorem Ipsum</h2>
-				<div class="main01_text">
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-				</div>
-			<div class="main01_To_02"></div>
-		</div>
-		<div class="main02">
-			<div class="main02_img"></div>
-			<div class="main02_text_div">
-				<div class="main02_line"></div>
-				<h2>Where can I get some?</h2>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-				</p>
-				<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-				</p>
-			</div>
-			<div class="main02_To_03"></div>
-		</div>
-
-		<div class="main03">
-
-			<div class="main03_img"></div>
-			<div class="main03_text_div">
-				<h2>Why do we use it?</h2>
-				<p> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<p>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-			</div>
-		</div>
+	</div>
 	<footer>
 		<div class="footer_icon">
 				<a href="#"><i class="fab fa-facebook-f"></i></a>
