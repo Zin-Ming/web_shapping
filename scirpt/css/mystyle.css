@@ -634,6 +634,235 @@ textarea.contact_form_input
 	transform: scale(1.1);
 }
 
+.shap_banner
+{
+	width: 100%;
+	height: 50%;
+	color: gray;
+	margin-bottom: -5px;
+}
+
+.shap_banner_text
+{
+	position: absolute;
+	width: 40%;
+	top: 20%;
+	left: 5%;
+}
+
+.shap_main
+{
+	
+	width: 100%;
+	background-color: #E2E2E2;
+}
+
+.shap_main_To
+{
+	width: 100%;
+	height: 10%;
+	background-color: #181818;
+	color: gray;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+
+.glasses01
+{
+	position: relative;
+	width: 80%;
+	padding: 3% 5% 3% 0%;
+	background-color: #E2E2E2;
+	display: flex;
+	transition: all 0.6s ease-out;
+}
+
+.glasses01:hover
+{
+	background: #CCCCCC;
+	padding-left: 5%;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.glasses01 > span
+{
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+	transform: rotate(180deg);
+	opacity: 0;
+	transition: all 0.6s ease-out;
+}
+
+.glasses01:hover span
+{
+	bottom: 5%;
+	opacity: 1;
+}
+
+.glasses01 img
+{
+	width: 30%;
+}
+
+.glasses01 h2 , p
+{
+	width: 80%;
+	padding-left: 5%;
+}
+
+.show-enter-active , .show-leave-active
+{
+	transition: all 0.6s ease-out;
+}
+
+.show-enter , .show-leave-to
+{
+	transform: translateX(-100px);
+	opacity: 0;
+}
+
+.shap_color
+{
+	position: absolute;
+	right: 0;
+	width: 100px;
+	height: 30%;
+	top: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	align-items: center;
+}
+
+.shap_color div:nth-child(1)
+{
+	margin: 10px 0px;
+	width: 40px;
+	height: 40px;
+	background-color: #A8D5EA;
+	border-radius: 50%;
+	transition: all 0.6s ease-out;
+}
+
+.shap_color div:nth-child(2)
+{
+	margin: 10px 0px;
+	width: 40px;
+	height: 40px;
+	background-color:#EF7E7E;
+	border-radius: 50%;
+	transition: all 0.6s ease-out;
+}
+
+.shap_color div:nth-child(3)
+{
+	margin: 10px 0px;
+	width: 40px;
+	height: 40px;
+	background-color:#EDC692;
+	border-radius: 50%;
+	transition: all 0.6s ease-out;
+}
+
+.shap_color div:hover
+{
+	cursor: pointer;
+	transform: scale(1.5);
+}
+
+
+.shap_show
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #e2e2e2;
+	text-align: center;
+}
+
+.shap_show ul
+{
+	margin: 0px;
+	padding: 0;
+}
+
+.shap_show li
+{
+	list-style: none;
+	padding: 20px 5px;
+}
+
+.shap_show p
+{
+	width: 20%;
+	font-size: 20px;
+	padding: 20px 0px;
+	margin-left: auto;
+	color: #181818;
+}
+
+
+.shap_show img
+{
+	width: 50%;
+}
+
+.glasses_list
+{
+	color: gray;
+	transition: all 0.6s ease-out;
+	background-color:#A8D5EA;
+}
+
+.glasses_list li:nth-child(4)
+{
+	margin: 0px auto;
+	width: 50%;
+	font-size: 12px;
+}
+
+
+.shap_span
+{
+	width: 100%;
+	height: 2px;
+	background-color: white;
+}
+
+.item_color
+{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	right: 0px;
+	z-index: 100;
+	top: 50%;
+}
+
+.item_color:nth-child(1)
+{
+	width: 50px;
+	height: 50px;
+	background-color: #90C6CA;
+}
+
+.item_color:nth-child(2)
+{
+	width: 50px;
+	height: 50px;
+	background-color:#DC8A8C;
+}
+
+.item_color:nth-child(3)
+{
+	width: 50px;
+	height: 50px;
+	background-color:#E2BC93;
+}
+
 
 @media screen and (max-width:700px)
 {

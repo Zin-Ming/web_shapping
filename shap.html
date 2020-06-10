@@ -18,9 +18,53 @@
 			<a href="Contact.html">Contact</a>
 			</div>	
 	</div>
-	<div class="shap">
+	<div id="shap" class="shap">
+		<div class="shap_banner">
+			<img src="img/shap/shap_banner_img.jpg" width="100%" alt="">
+			<div class="shap_banner_text">
+				<h3>Where does it come from</h3>
+				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+			</div>
+		</div>
+		<div class="shap_main_To">
+			<h3>Store</h3>
+		</div>
 		<div class="shap_main">
-			<div v-for="(item , index) in list" :key="itme.id"></div>
+			<div class="glasses01" @click.prevent="show()">
+				<img src="img/shap/glasses01-blue.png" width="50%" alt="">
+				<div class="glasses01_text">
+					<h2>come from</h2>
+					<p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+				</div>
+				<span><i class="fas fa-chevron-circle-down"></i></span>
+			</div>
+			<transition name="show">
+			<div class="shap_show" v-if="show_shap">
+				<div class="shap_color">
+					<div @click.prevent="change_color(1)"></div>
+					<div @click.prevent="change_color(2)"></div>
+					<div @click.prevent="change_color(3)"></div>
+				</div>
+				<div class="glasses_list" v-for="(item , index) in list" :key="item.id">
+					<ul>
+						<li><img v-bind:src="item.imgUrl" alt=""></li>
+						<li>{{ item.name }}</li>
+						<li>${{ item.price }}</li>
+						<li>{{ item.info }}</li>
+					</ul>
+					<p><i class="fas fa-shopping-cart"></i></p>
+				</div>
+			</div>
+			</transition>
+			<div class="shap_span"></div>
+			<div class="glasses01" @click.prevent="show()">
+				<img src="img/shap/glasses02-blue.png" width="50%" alt="">
+				<div class="glasses01_text">
+					<h2>Various</h2>
+					<p>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+				</div>
+				<span><i class="fas fa-chevron-circle-down"></i></span>
+			</div>
 		</div>
 	</div>
 	<footer>
@@ -50,11 +94,7 @@
 			<p>What is Lorem Ipsum</p>
 		</div>
 	</footer>
-<script>
-	
-	
-	
-</script>
+	<script src="scirpt/vue/web_vueJs.js"></script>
 	
 	
 </body>
