@@ -41,16 +41,18 @@
 			<transition name="show">
 			<div class="shap_show" v-if="show_shap">
 				<div class="shap_color">
-					<div @click.prevent="change_color(1)"></div>
-					<div @click.prevent="change_color(2)"></div>
-					<div @click.prevent="change_color(3)"></div>
+					<div @click.prevent="change_color(1)" ></div>
+					<div @click.prevent="change_color(2)" ></div>
+					<div @click.prevent="change_color(3)" ></div>
 				</div>
-				<div class="glasses_list" v-for="(item , index) in list" :key="item.id">
+				<div class="glasses_list">
 					<ul>
-						<li><img v-bind:src="item.imgUrl" alt=""></li>
-						<li>{{ item.name }}</li>
-						<li>${{ item.price }}</li>
-						<li>{{ item.info }}</li>
+					    <transition name="list_img">
+						<li><img v-bind:src="imgUrl" alt=""></li>
+						</transition>
+						<li>{{ name }}</li>
+						<li>${{ price }}</li>
+						<li>{{ info }}</li>
 					</ul>
 					<p><i class="fas fa-shopping-cart"></i></p>
 				</div>

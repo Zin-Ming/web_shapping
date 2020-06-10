@@ -804,11 +804,22 @@ textarea.contact_form_input
 	color: #181818;
 }
 
-
 .shap_show img
 {
 	width: 50%;
 }
+
+.list_img-enter-active , .list_img-leave-active
+{
+	transition: all 0.6s ease-out;
+}
+
+.list_img-enter , .list_img-leave-to
+{
+	transform: translateX(-100px);
+	opacity: 0;
+}
+
 
 .glasses_list
 {
@@ -816,6 +827,7 @@ textarea.contact_form_input
 	transition: all 0.6s ease-out;
 	background-color:#A8D5EA;
 }
+
 
 .glasses_list li:nth-child(4)
 {
