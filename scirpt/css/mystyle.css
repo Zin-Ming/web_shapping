@@ -194,7 +194,7 @@ input[name="r"]
 	width: 50%;
 	height: 100%;
 	position: absolute;
-	background-image: url(../../img/index/index_img02.png);
+	background-image: url(../../img/index/index_img01.png);
 	background-position:40% 20%;
 	background-size:cover;
 
@@ -254,7 +254,7 @@ input[name="r"]
 	width: 40%;
 	height: 100%;
 	left: 53%;
-	background-image: url(../../img/index/index_img01.png);
+	background-image: url(../../img/index/index_img02.png);
 	background-position: 40% 0%;
 	background-size: cover;
 }
@@ -278,6 +278,7 @@ footer
 	width: 100%;
 	text-align: center;
 	background-color:#171717;
+	position: relative;
 }
 
 .footer_main
