@@ -221,7 +221,7 @@ input[name="r"]
 	position: absolute;
 	width: 70%;
 	height: 3px;
-	background-color:white;
+	background-color: gray;
 	left: 0;
 	transform: translateY(-15px);
 }
@@ -270,6 +270,7 @@ input[name="r"]
 
 .main03_text_div > p
 {
+	padding: 10px 0px;
 	line-height: 20px;
 }
 
@@ -457,6 +458,7 @@ footer
 
 .about_main02_text_div > p
 {
+	padding: 10px 0px;
 	font-size: 12px;
 	line-height: 20px;
 }
