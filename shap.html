@@ -14,7 +14,7 @@
 		<div class="nav">
 			<a href="index.html">Home</a>
 			<a href="About.html">About</a>
-			<a href="#">Shap</a>
+			<a href="shap.html">Shap</a>
 			<a href="Contact.html">Contact</a>
 			</div>	
 	</div>
@@ -29,7 +29,12 @@
 		<div class="shap_main_To">
 			<h3>Store</h3>
 		</div>
-		<div class="shap_main">
+		<div id="shap_main" class="shap_main">
+			<div class="shap_cart_page"  v-for="(item , index) in list" :key="item.id">
+					<p>{{ item.name }}</p>
+					<p>{{ item.price }}</p>
+			</div>
+			<div class="shap_cart"><p><i class="fas fa-shopping-cart"></i></p></div>
 			<div class="glasses01" @click.prevent="show()">
 				<img src="img/shap/glasses01-blue.png" width="50%" alt="">
 				<div class="glasses01_text">
@@ -41,10 +46,12 @@
 			<transition name="show">
 			<div class="shap_show" v-if="show_shap">
 				<div class="shap_color">
-					<div v-for="tab in tabs" v-bind:key="tab.name" @click.prevent="currentTab = tab" ></div>
+					<div @click.prevent="show_g(1)"></div>
+					<div @click.prevent="show_g(2)"></div>
+					<div @click.prevent="show_g(3)"></div>
 				</div>
 				<transition name="component-fade" mode="out-in">
-				<component v-bind:is="currentTab.component"></component>
+				<component v-bind:is="g_view"></component>
 				</transition>
 			</div>
 			</transition>
@@ -59,10 +66,12 @@
 			<transition name="show">
 			<div class="shap_show" v-if="show_various_page">
 				<div class="shap_color">
-					<div v-for="variou in various" v-bind:key="variou.name" @click.prevent="varTab = variou" ></div>
+					<div @click.prevent="show_v(1)"></div>
+					<div @click.prevent="show_v(2)"></div>
+					<div @click.prevent="show_v(3)"></div>
 				</div>
 				<transition name="component-fade" mode="out-in">
-				<component v-bind:is="varTab.component"></component>
+				<component v-bind:is="v_view"></component>
 				</transition>
 			</div>
 			</transition>
@@ -80,7 +89,7 @@
 				<h3>Content</h3>
 				<a href="index.html">Home</a>
 				<a href="About.html">About</a>
-				<a href="#">Shap</a>
+				<a href="shap.html">Shap</a>
 				<a href="Contact.html">Contact</a>
 			</div>
 			<div class="footer_address">
