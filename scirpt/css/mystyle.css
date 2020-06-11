@@ -773,6 +773,21 @@ textarea.contact_form_input
 	transform: scale(1.5);
 }
 
+.blue
+{
+	background-color: #A8D5EA;
+}
+
+.red
+{
+	background-color: #EF7E7E;
+}
+
+.yellow
+{
+	background-color: #EDC692;
+}
+
 
 .shap_show
 {
@@ -809,12 +824,19 @@ textarea.contact_form_input
 	width: 50%;
 }
 
-.list_img-enter-active , .list_img-leave-active
+.component-fade-enter-active ,.component-fade-leave-active
 {
 	transition: all 0.6s ease-out;
 }
 
-.list_img-enter , .list_img-leave-to
+
+.component-fade-enter 
+{
+	transform: translateY(-100px);
+	opacity: 0;
+}
+
+.component-fade-leave-to
 {
 	transform: translateX(-100px);
 	opacity: 0;
@@ -825,7 +847,6 @@ textarea.contact_form_input
 {
 	color: gray;
 	transition: all 0.6s ease-out;
-	background-color:#A8D5EA;
 }
 
 

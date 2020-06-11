@@ -41,11 +41,11 @@
 			<transition name="show">
 			<div class="shap_show" v-if="show_shap">
 				<div class="shap_color">
-					<div v-bind:key="glasses.color" @click.prevent="currentTab = tab" ></div>
-					<div v-bind:key="glasses.color" @click.prevent="currentTab = tab"  ></div>
-					<div v-bind:key="glasses.color" @click.prevent="currentTab = tab"  ></div>
+					<div v-for="tab in tabs" v-bind:key="tab.name" @click.prevent="currentTab = tab" ></div>
 				</div>
+				<transition name="component-fade" mode="out-in">
 				<component v-bind:is="currentTab.component"></component>
+				</transition>
 			</div>
 			</transition>
 			<div class="shap_span"></div>
