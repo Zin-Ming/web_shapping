@@ -48,8 +48,7 @@
 				</transition>
 			</div>
 			</transition>
-			<div class="shap_span"></div>
-			<div class="glasses01" @click.prevent="show()">
+			<div class="glasses01" @click.prevent="show_various()">
 				<img src="img/shap/glasses02-blue.png" width="50%" alt="">
 				<div class="glasses01_text">
 					<h2>Various</h2>
@@ -57,6 +56,16 @@
 				</div>
 				<span><i class="fas fa-chevron-circle-down"></i></span>
 			</div>
+			<transition name="show">
+			<div class="shap_show" v-if="show_various_page">
+				<div class="shap_color">
+					<div v-for="variou in various" v-bind:key="variou.name" @click.prevent="varTab = variou" ></div>
+				</div>
+				<transition name="component-fade" mode="out-in">
+				<component v-bind:is="varTab.component"></component>
+				</transition>
+			</div>
+			</transition>
 		</div>
 	</div>
 	<footer>
