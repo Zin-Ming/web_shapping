@@ -1,5 +1,52 @@
 // JavaScript Document
 
+var tabs = [
+	
+	{ 
+		name: 'glasses01_blue',
+		imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png',
+		price:'1000',
+		info:'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+		count:'1',
+		
+		component:{
+			
+			template:'<div class="glasses_list"><ul><li><img v-bind:src="imgUrl" alt=""></li><li>{{ name }}</li><li>${{ price }}</li><li>{{ info }}</li></ul><p><i class="fas fa-shopping-cart"></i></p></div>'
+			
+		},
+	},
+	
+	{ 
+		name: 'glasses01_red',
+		imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-red.png',
+		price:'1000',
+		info:'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+		count:'1',	
+		
+		component:{
+			
+			template:'<div class="glasses_list"><ul><li><img v-bind:src="imgUrl" alt=""></li><li>{{ name }}</li><li>${{ price }}</li><li>{{ info }}</li></ul><p><i class="fas fa-shopping-cart"></i></p></div>'
+			
+		},
+	},
+	
+	{ 
+		name: 'glasses01_yellow',
+		imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-yellow.png',
+		price:'1000',
+		info:'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+		count:'1',	
+		
+		component:{
+			
+			template:'<div class="glasses_list"><ul><li><img v-bind:src="imgUrl" alt=""></li><li>{{ name }}</li><li>${{ price }}</li><li>{{ info }}</li></ul><p><i class="fas fa-shopping-cart"></i></p></div>'
+			
+		},
+	}
+	
+	
+];
+
 
 var list = new Vue({
 	
@@ -9,12 +56,8 @@ var list = new Vue({
 		
 		show_shap:false,
 		
-		name: 'glasses01_blue',
-		imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png',
-		price:'1000',
-		info:'here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-		count:'1',	
-		
+		tabs:tabs,
+		currentTab:tabs[0],
 	},
 	
 	methods:{

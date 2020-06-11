@@ -41,21 +41,11 @@
 			<transition name="show">
 			<div class="shap_show" v-if="show_shap">
 				<div class="shap_color">
-					<div @click.prevent="change_color(1)" ></div>
-					<div @click.prevent="change_color(2)" ></div>
-					<div @click.prevent="change_color(3)" ></div>
+					<div v-bind:key="glasses.color" @click.prevent="currentTab = tab" ></div>
+					<div v-bind:key="glasses.color" @click.prevent="currentTab = tab"  ></div>
+					<div v-bind:key="glasses.color" @click.prevent="currentTab = tab"  ></div>
 				</div>
-				<div class="glasses_list">
-					<ul>
-					    <transition name="list_img">
-						<li><img v-bind:src="imgUrl" alt=""></li>
-						</transition>
-						<li>{{ name }}</li>
-						<li>${{ price }}</li>
-						<li>{{ info }}</li>
-					</ul>
-					<p><i class="fas fa-shopping-cart"></i></p>
-				</div>
+				<component v-bind:is="currentTab.component"></component>
 			</div>
 			</transition>
 			<div class="shap_span"></div>
