@@ -7,9 +7,28 @@ var g_blue = Vue.component('g_blue',{
 	
 	methods:{
 		
-		add:function(){
+		add:function(item , id){
 			
-			var item = {name:'g_blue',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png'};
+			var item = {id:1, name:'g_blue',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png'};
+			
+			var newcount = 1;
+			
+			for(var i in glasses01.list){
+				
+				if(glasses01.list[i].id === item.id){
+					
+					newcount = glasses01.list[i].count+1;
+				
+				
+					var newid = glasses01.list.indexOf(glasses01.list[i]);
+				
+					glasses01.list.splice(newid ,1);	
+				
+				}
+				
+			}
+			
+			item.count = newcount;
 			
 			glasses01.list.push(item);
 			
@@ -48,12 +67,30 @@ var v_yellow = Vue.component('v_yellow',{
 	
 	methods:{
 		
-		add:function(){
+		add:function(item , id){
 			
-			var item = {name:'yellow',price:1000 ,count:1};
+			var item = {id:6,name:'yellow',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-yellow.png'};
+			
+			var newcount = 1;
+			
+			for(var i in glasses01.list){
+				
+				if(glasses01.list[i].id === item.id ){
+					
+					newcount = glasses01.list[i].count+1;
+				
+				
+					var newid = glasses01.list.indexOf(glasses01.list[i]);
+				
+					glasses01.list.splice(newid ,1);	
+					
+				}
+			}
+			
+			item.count = newcount;
 			
 			glasses01.list.push(item);
-
+			
 		},
 		
 	},

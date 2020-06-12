@@ -849,11 +849,11 @@ textarea.contact_form_input
 .shap_cart_page
 {
 	position:fixed;
-	z-index: 200;
-	top: 10%;
-	left: 10%;
-	width: 80%;
-	height: 80%;
+	z-index: 140;
+	top: 0%;
+	left: 40%;
+	width: 60%;
+	height: 100%;
 	background-color:#E2E2E2;
 	color: gray;
 	overflow:auto;
@@ -866,7 +866,7 @@ textarea.contact_form_input
 
 .shap_cart_page-enter , .shap_cart_page-leave-to
 {
-	transform: translate(60% , 60%) scale(0);
+	transform: translateX(60%);
 	background-color: #181818;
 	opacity: 0;
 }
@@ -880,8 +880,8 @@ textarea.contact_form_input
 
 .shap_cart_page_head
 {
-	width: 100%;
-	padding: 10px 0px;
+	width: 95%;
+	padding: 10px 5px;
 	margin: 5px auto;
 }
 
@@ -955,7 +955,11 @@ textarea.contact_form_input
 
 .show_cart_page_total
 {
-	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 151;
+	width: 80%;
 	padding: 10px 0px;
 	justify-content: space-around;
 }
