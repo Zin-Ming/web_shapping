@@ -838,8 +838,19 @@ textarea.contact_form_input
 	transform: scale(1.2);
 }
 
+.shap_cart p:nth-child(1)
+{
+	position: absolute;
+	z-index: 151;
+	top:10%;
+	right: 20%;
+	color: #E2E2E2;
+	font-size: 30px;
+	margin: 0;
+}
 
-.shap_cart p
+
+.shap_cart p:nth-child(2)
 {
 	color: gray;
 	width: 95%;
@@ -857,6 +868,8 @@ textarea.contact_form_input
 	background-color:#E2E2E2;
 	color: gray;
 	overflow:auto;
+	padding: 10px 20px;
+
 }
 
 .shap_cart_page-enter-active , .shap_cart_page-leave-active
@@ -907,10 +920,10 @@ textarea.contact_form_input
 
 .shap_cart_data
 {
-	width: 100%;
+	width: 95%;
 	align-items:center;
 	background-color: #C6C6C6;
-	padding: 10px 0px;
+	padding: 10px 5px;
 	margin: 5px auto;
 }
 
@@ -955,13 +968,11 @@ textarea.contact_form_input
 
 .show_cart_page_total
 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: 151;
-	width: 80%;
+	width: 95%;
 	padding: 10px 0px;
 	justify-content: space-around;
+	z-index: 200;
+	margin-bottom: 20px;
 }
 
 .show_cart_page_total p

@@ -54,17 +54,20 @@
 					</div>
 					<div class="shap_cart_del" @click="del_item(item.id)"><p>刪除</p></div>
 				</div>
-				<div class="show_cart_page_total">
+				<div class="show_cart_page_total" v-if="show_cart_page">
 					<p>總計:{{ total }}元</p>
 					<div>結帳去</div>
 				</div>
 			</div>
 			</transition>
-			<div class="shap_cart" @click.prevent="btn_show_cart_page()"><p><i class="fas fa-shopping-cart"></i></p></div>
+			<div class="shap_cart" @click.prevent="btn_show_cart_page()">
+				<p>{{ cart_count }}</p>
+				<p><i class="fas fa-shopping-cart"></i></p>
+			</div>
 			<div class="glasses01" @click.prevent="btn_show_g_page()">
 				<img src="img/shap/glasses01-blue.png" width="50%" alt="">
 				<div class="glasses01_text">
-					<h2>come from</h2>
+					<h2>Ipsum</h2>
 					<p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
 				</div>
 				<span><i class="fas fa-chevron-circle-down"></i></span>

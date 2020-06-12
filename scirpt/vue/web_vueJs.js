@@ -3,13 +3,13 @@
 
 var g_blue = Vue.component('g_blue',{
 
-	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-blue.png" alt=""></li><li> g_blue </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-blue.png" alt=""></li><li> Ipsum_blue </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
 		add:function(item , id){
 			
-			var item = {id:1, name:'g_blue',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png'};
+			var item = {id:1, name:'Ipsum_blue',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png'};
 			
 			var newcount = 1;
 			
@@ -40,25 +40,156 @@ var g_blue = Vue.component('g_blue',{
 	
 var g_red = Vue.component('g_red',{
 	
-	template:'<div class="glasses_list red"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-red.png" alt=""></li><li> g_red </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>'
+	template:'<div class="glasses_list red"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-red.png" alt=""></li><li> Ipsum_red </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
+	
+	methods:{
+		
+		add:function(item , id){
+			
+			var item = {id:2, name:'Ipsum_red',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-red.png'};
+			
+			var newcount = 1;
+			
+			for(var i in glasses01.list){
+				
+				if(glasses01.list[i].id === item.id){
+					
+					newcount = glasses01.list[i].count+1;
+				
+				
+					var newid = glasses01.list.indexOf(glasses01.list[i]);
+				
+					glasses01.list.splice(newid ,1);	
+				
+				}
+				
+			}
+			
+			item.count = newcount;
+			
+			glasses01.list.push(item);
+			
+		},
+		
+	},
+	
 			
 });
 	
 var g_yellow = Vue.component('g_yellow',{
 	
-	template:'<div class="glasses_list yellow"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-yellow.png" alt=""></li><li> glasses01_yellow </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>'
+	template:'<div class="glasses_list yellow"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-yellow.png" alt=""></li><li> Ipsum_yellow </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
+	
+	methods:{
+		
+		add:function(item , id){
+			
+			
+			var item = {id:3, name:'Ipsum_yellow',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-yellow.png'};
+			
+			var newcount = 1;
+			
+			for(var i in glasses01.list){
+				
+				if(glasses01.list[i].id === item.id){
+					
+					newcount = glasses01.list[i].count+1;
+				
+				
+					var newid = glasses01.list.indexOf(glasses01.list[i]);
+				
+					glasses01.list.splice(newid ,1);	
+				
+				}
+				
+			}
+			
+			item.count = newcount;
+			
+			glasses01.list.push(item);
+			
+		},
+		
+	},
+	
+	
 });
 	
 
 	
 var v_blue = Vue.component('v_blue',{ 
 			
-	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-blue.png" alt=""></li><li> variou_blue </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>'
+	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-blue.png" alt=""></li><li> variou_blue </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
+	
+	methods:{
+		
+		add:function(item , id){
+			
+			
+			var item = {id:4,name:'variou_blue',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-blue.png'};
+			
+			var newcount = 1;
+			
+			for(var i in glasses01.list){
+				
+				if(glasses01.list[i].id === item.id ){
+					
+					newcount = glasses01.list[i].count+1;
+				
+				
+					var newid = glasses01.list.indexOf(glasses01.list[i]);
+				
+					glasses01.list.splice(newid ,1);	
+					
+				}
+			}
+			
+			item.count = newcount;
+			
+			glasses01.list.push(item);
+			
+		},
+		
+	},
+	
+	
 });
 	
 var v_red = Vue.component('v_red',{	
 			
-	template:'<div class="glasses_list red"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-red.png" alt=""></li><li> variou_red </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>'
+	template:'<div class="glasses_list red"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-red.png" alt=""></li><li> variou_red </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
+	
+	methods:{
+		
+		add:function(item , id){
+			
+			
+			var item = {id:5,name:'variou_red',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-red.png'};
+			
+			var newcount = 1;
+			
+			for(var i in glasses01.list){
+				
+				if(glasses01.list[i].id === item.id ){
+					
+					newcount = glasses01.list[i].count+1;
+				
+				
+					var newid = glasses01.list.indexOf(glasses01.list[i]);
+				
+					glasses01.list.splice(newid ,1);	
+					
+				}
+			}
+			
+			item.count = newcount;
+			
+			glasses01.list.push(item);
+			
+		},
+		
+	},
+	
 });
 	
 var v_yellow = Vue.component('v_yellow',{
@@ -69,7 +200,8 @@ var v_yellow = Vue.component('v_yellow',{
 		
 		add:function(item , id){
 			
-			var item = {id:6,name:'yellow',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-yellow.png'};
+			
+			var item = {id:6,name:'variou_yellow',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-yellow.png'};
 			
 			var newcount = 1;
 			
@@ -179,7 +311,8 @@ var glasses01 = new Vue({
 		
 		add_count:function(item){
 			
-			item.count++;
+				item.count++;
+			
 			
 		},
 		
@@ -189,10 +322,11 @@ var glasses01 = new Vue({
 				
 				item.count--;
 				
+				
 			}
 		},
 		
-		del_item(id){
+		del_item(id, item ,count){
 			
 			var index = this.list.findIndex(item => {
 				
@@ -233,6 +367,20 @@ var glasses01 = new Vue({
 			}
 			
 			return total;
+			
+		},
+		
+		cart_count:function(){
+			
+			var cart_count = 0;
+			
+			for(var i in this.list){
+				
+				cart_count += this.list[i].count;
+				
+			}
+			
+			return cart_count;
 			
 		},
 	
