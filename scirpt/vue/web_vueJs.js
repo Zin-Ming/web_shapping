@@ -146,6 +146,35 @@ var glasses01 = new Vue({
 			
 		},
 		
+		del_count:function(item){
+			
+			if(item.count > 1){
+				
+				item.count--;
+				
+			}
+		},
+		
+		del_item(id){
+			
+			var index = this.list.findIndex(item => {
+				
+				if(item.id === id){
+					
+					return true;
+					
+				}
+				
+			});
+			
+			this.list.splice(index , 1);
+			
+			
+			
+		}
+		
+		
+		
 	},
 	
 	computed:{

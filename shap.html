@@ -35,11 +35,11 @@
 					<span>{{ item.name }}</span>
 					<span>{{ item.price }}</span>
 					<div class="count">
-						<button>-</button>
+						<button @click="del_count(item)">-</button>
 						<span>{{ item.count }}</span>
 						<button @click="add_count(item)">+</button>
 					</div>
-					<span>刪除</span>
+					<div class="shap_cart_del" @click="del_item(item.id)"><span>刪除</span></div>
 				</div>
 				<div class="show_cart_page_total">總計:{{ total }}
 					<button>結帳去</button>
