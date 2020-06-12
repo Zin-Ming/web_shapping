@@ -30,9 +30,20 @@
 			<h3>Store</h3>
 		</div>
 		<div id="shap_main" class="shap_main">
-			<div class="shap_cart_page"  v-for="(item , index) in list" :key="item.id">
-					<p>{{ item.name }}</p>
-					<p>{{ item.price }}</p>
+			<div class="shap_cart_page">
+				<div v-for="(item , index) in list" :key="item.id">
+					<span>{{ item.name }}</span>
+					<span>{{ item.price }}</span>
+					<div class="count">
+						<button>-</button>
+						<span>{{ item.count }}</span>
+						<button @click="add_count(item)">+</button>
+					</div>
+					<span>刪除</span>
+				</div>
+				<div class="show_cart_page_total">總計:{{ total }}
+					<button>結帳去</button>
+				</div>
 			</div>
 			<div class="shap_cart"><p><i class="fas fa-shopping-cart"></i></p></div>
 			<div class="glasses01" @click.prevent="show()">
