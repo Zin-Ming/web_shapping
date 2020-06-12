@@ -5,24 +5,11 @@ var g_blue = Vue.component('g_blue',{
 
 	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-blue.png" alt=""></li><li> g_blue </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="btn_cart" @click="add()">Add cart</div></li></ul></div>',
 	
-	data:function(){
-		
-		return {
-		
-		name:'',
-		
-		price:'',
-		
-		count:1,
-			
-		};
-	},
-	
 	methods:{
 		
 		add:function(){
 			
-			var item = {name:'g_blue',price:1000, count:1};
+			var item = {name:'g_blue',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png'};
 			
 			glasses01.list.push(item);
 			
@@ -86,8 +73,10 @@ var glasses01 = new Vue({
 		
 		v_view:'v_blue',
 		
-		show_shap:false,
-		show_various_page:false,
+		show_g_page:false,
+		show_v_page:false,
+		show_cart_page:false,
+		shap_cart_no_data:true,
 		
 		list:[],
 	
@@ -95,15 +84,18 @@ var glasses01 = new Vue({
 	
 	methods:{
 		
-		show:function(){
+		btn_show_g_page:function(){
 			
-			this.show_shap = !this.show_shap;
+			this.show_g_page = !this.show_g_page;
+		},
+		
+		
+		btn_show_v_page:function(){
+			
+			this.show_v_page = !this.show_v_page;
 		},	
 		
-		show_various:function(){
-			
-			this.show_various_page = !this.show_various_page;
-		},	
+		
 		
 		show_g:function(color){
 			
@@ -140,6 +132,14 @@ var glasses01 = new Vue({
 			
 		},
 		
+		btn_show_cart_page:function(){
+			
+			this.show_cart_page = !this.show_cart_page;
+			
+		},
+		
+		
+		
 		add_count:function(item){
 			
 			item.count++;
@@ -169,11 +169,7 @@ var glasses01 = new Vue({
 			
 			this.list.splice(index , 1);
 			
-			
-			
-		}
-		
-		
+		},
 		
 	},
 	
@@ -188,12 +184,23 @@ var glasses01 = new Vue({
 				total += this.list[i].price *this.list[i].count;
 				
 			}
+			
+			if(total === 0){
+				
+				this.shap_cart_no_data = true;
+				
+			}else{
+				
+				this.shap_cart_no_data = false;
+				
+			}
+			
 			return total;
+			
 		},
-		
+	
 		
 	},
-	
 	
 	component:{
 		

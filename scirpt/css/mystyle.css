@@ -830,7 +830,14 @@ textarea.contact_form_input
 	text-align: center;
 	background-color: #202020;
 	z-index:150;
+	transition: all 0.3s ease-out;
 }
+
+.shap_cart:hover
+{
+	transform: scale(1.2);
+}
+
 
 .shap_cart p
 {
@@ -841,23 +848,145 @@ textarea.contact_form_input
 
 .shap_cart_page
 {
-	width: 100%;
+	position:fixed;
+	z-index: 200;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	background-color:#E2E2E2;
+	color: gray;
+	overflow:auto;
 }
+
+.shap_cart_page-enter-active , .shap_cart_page-leave-active
+{
+	transition: all 0.6s ease-out;
+}
+
+.shap_cart_page-enter , .shap_cart_page-leave-to
+{
+	transform: translate(60% , 60%) scale(0);
+	background-color: #181818;
+	opacity: 0;
+}
+
+.shap_cart_no_data p
+{
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+}
+
+.shap_cart_page_head
+{
+	width: 100%;
+	padding: 10px 0px;
+	margin: 5px auto;
+}
+
+.shap_cart_page_head div:nth-child(1)
+{
+	width: 30%;
+}
+
+.shap_cart_page_head div:nth-child(2)
+{
+	width: 20%;
+}
+
+.shap_cart_page_head div:nth-child(3)
+{
+	width: 20%;
+}
+
+.shap_cart_page_head div:nth-child(4)
+{
+	width: 20%;
+}
+
+.shap_cart_data
+{
+	width: 100%;
+	align-items:center;
+	background-color: #C6C6C6;
+	padding: 10px 0px;
+	margin: 5px auto;
+}
+
+.shap_cart_data img
+{
+	width: 50%;
+}
+
+.shap_cart_data p
+{
+	padding: 10px 0px;
+	width: 30%;
+	font-size: 16px;
+}
+
+.shap_cart_data div:nth-child(1)
+{
+	width: 30%;
+	align-items: center;
+}
+
+.shap_cart_data div:nth-child(2)
+{
+	width: 20%;
+}
+
+.shap_count
+{
+	width: 20%;
+}
+
+.shap_count span
+{
+	margin: 0px 10px;
+}
+
 
 .shap_cart_page div
 {
 	display: flex;
+}
+
+.show_cart_page_total
+{
+	width: 100%;
+	padding: 10px 0px;
 	justify-content: space-around;
-	margin: 20px 5px;
+}
+
+.show_cart_page_total p
+{
+	font-size: 18px;
+	margin: 0px 20px;
+}
+
+.show_cart_page_total div
+{
+	padding: 5px 10px;
+	background-color: #181818;
+	border-radius: 10px;
+	color: gray;
+	justify-content: center;
 }
 
 .shap_cart_del
 {
-	width: 5%;
-	background-color: #181818;
+	width: 20%;
 	color: gray;
-	transition: all 0.6s ease-out;
-	
+	transition: all 0.3s ease-out;
+}
+
+.shap_cart_del p
+{
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #181818;
 }
 
 .shap_cart_del:hover
@@ -865,8 +994,10 @@ textarea.contact_form_input
 	transform: scale(1.1);
 }
 
-
-
+.shap_cart_del span
+{
+	padding: 0px 10px;
+}
 
 .shap_show img
 {
@@ -916,6 +1047,7 @@ textarea.contact_form_input
 	border-radius: 50px;
 	color: gray;
 	transition: all 0.6s ease-out;
+	user-select: none;
 }
 
 .btn_cart:hover

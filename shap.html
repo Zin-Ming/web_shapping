@@ -30,23 +30,38 @@
 			<h3>Store</h3>
 		</div>
 		<div id="shap_main" class="shap_main">
-			<div class="shap_cart_page">
-				<div v-for="(item , index) in list" :key="item.id">
-					<span>{{ item.name }}</span>
-					<span>{{ item.price }}</span>
-					<div class="count">
+			<transition name="shap_cart_page">
+			<div class="shap_cart_page" v-if="show_cart_page">
+				<div class="shap_cart_page_head">
+					<div>商品名稱</div>
+					<div>價格</div>
+					<div>數量</div>
+					<div>選項</div>
+				</div>
+				<div class="shap_cart_no_data" v-if="shap_cart_no_data">
+					<p>購物車內無任何商品</p>
+				</div>
+				<div class="shap_cart_data" v-for="(item , index) in list" :key="item.id">
+					<div>
+						<img v-bind:src="item.imgUrl" alt="">
+						<p>{{ item.name }}</p>
+					</div>
+					<div>${{ item.price }}</div>
+					<div class="shap_count">
 						<button @click="del_count(item)">-</button>
 						<span>{{ item.count }}</span>
 						<button @click="add_count(item)">+</button>
 					</div>
-					<div class="shap_cart_del" @click="del_item(item.id)"><span>刪除</span></div>
+					<div class="shap_cart_del" @click="del_item(item.id)"><p>刪除</p></div>
 				</div>
-				<div class="show_cart_page_total">總計:{{ total }}
-					<button>結帳去</button>
+				<div class="show_cart_page_total">
+					<p>總計:{{ total }}</p>
+					<div>結帳去</div>
 				</div>
 			</div>
-			<div class="shap_cart"><p><i class="fas fa-shopping-cart"></i></p></div>
-			<div class="glasses01" @click.prevent="show()">
+			</transition>
+			<div class="shap_cart" @click.prevent="btn_show_cart_page()"><p><i class="fas fa-shopping-cart"></i></p></div>
+			<div class="glasses01" @click.prevent="btn_show_g_page()">
 				<img src="img/shap/glasses01-blue.png" width="50%" alt="">
 				<div class="glasses01_text">
 					<h2>come from</h2>
@@ -55,7 +70,7 @@
 				<span><i class="fas fa-chevron-circle-down"></i></span>
 			</div>
 			<transition name="show">
-			<div class="shap_show" v-if="show_shap">
+			<div class="shap_show" v-if="show_g_page">
 				<div class="shap_color">
 					<div @click.prevent="show_g(1)"></div>
 					<div @click.prevent="show_g(2)"></div>
@@ -66,7 +81,7 @@
 				</transition>
 			</div>
 			</transition>
-			<div class="glasses01" @click.prevent="show_various()">
+			<div class="glasses01" @click.prevent="btn_show_v_page()">
 				<img src="img/shap/glasses02-blue.png" width="50%" alt="">
 				<div class="glasses01_text">
 					<h2>Various</h2>
@@ -75,7 +90,7 @@
 				<span><i class="fas fa-chevron-circle-down"></i></span>
 			</div>
 			<transition name="show">
-			<div class="shap_show" v-if="show_various_page">
+			<div class="shap_show" v-if="show_v_page">
 				<div class="shap_color">
 					<div @click.prevent="show_v(1)"></div>
 					<div @click.prevent="show_v(2)"></div>
