@@ -7,16 +7,20 @@
 <script src="scirpt/vue/vue.js"></script>
 <link href="scirpt/css/mystyle.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-	<div class="nav_bar">
-		<div class="nav">
+	<div id="nav" class="nav_bar">
+		<span class="logo">Lorem Ipsum</span>
+		<span class="btn_nav_show" @click="btn_menu_show()" v-if="btn_menu"><i class="fas fa-bars"></i></span>
+		<div class="nav" v-bind:class="{ active: isActive }">
+			<p @click="btn_menu_show()" v-if="btn_menu_x"><i class="fas fa-times"></i></p>
 			<a href="index.html">Home</a>
 			<a href="About.html">About</a>
 			<a href="shap.html">Shap</a>
 			<a href="Contact.html">Contact</a>
-			</div>	
+		</div>	
 	</div>
 	<div id="shap" class="shap">
 		<div class="shap_banner">
@@ -60,7 +64,7 @@
 				</div>
 			</div>
 			</transition>
-			<div class="shap_cart" @click.prevent="btn_show_cart_page()">
+			<div class="btn_shap_cart" @click.prevent="btn_show_cart_page()">
 				<p>{{ cart_count }}</p>
 				<p><i class="fas fa-shopping-cart"></i></p>
 			</div>
@@ -133,8 +137,8 @@
 			<p>What is Lorem Ipsum</p>
 		</div>
 	</footer>
-	<script src="scirpt/vue/web_vueJs.js"></script>
 	
+	<script src="scirpt/vue/web_vueJs.js"></script>
 	
 </body>
 </html>

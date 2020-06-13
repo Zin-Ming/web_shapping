@@ -10,13 +10,16 @@
 </head>
 
 <body>
-	<div class="nav_bar">
-		<div class="nav">
+	<div id="nav" class="nav_bar">
+		<span class="logo">Lorem Ipsum</span>
+		<span class="btn_nav_show" @click="btn_menu_show()" v-if="btn_menu"><i class="fas fa-bars"></i></span>
+		<div class="nav" v-bind:class="{ active: isActive }">
+			<p @click="btn_menu_show()" v-if="btn_menu_x"><i class="fas fa-times"></i></p>
 			<a href="index.html">Home</a>
 			<a href="About.html">About</a>
 			<a href="shap.html">Shap</a>
 			<a href="Contact.html">Contact</a>
-			</div>	
+		</div>	
 	</div>
 		<div class="banner_show">
 			<div class="banner">
@@ -104,13 +107,9 @@
 			<p><i class="fas fa-copyright"></i></p>
 			<p>What is Lorem Ipsum</p>
 		</div>
-	</footer>
-<script>
+	</footer>	
 	
-	
-	
-</script>
-	
+	<script src="scirpt/vue/web_vueJs.js"></script>
 	
 </body>
 </html>

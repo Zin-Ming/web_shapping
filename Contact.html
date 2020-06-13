@@ -10,24 +10,38 @@
 </head>
 
 <body>
-	<div class="nav_bar">
-		<div class="nav">
+	<div id="nav" class="nav_bar">
+		<span class="logo">Lorem Ipsum</span>
+		<span class="btn_nav_show" @click="btn_menu_show()" v-if="btn_menu"><i class="fas fa-bars"></i></span>
+		<div class="nav" v-bind:class="{ active: isActive }">
+			<p @click="btn_menu_show()" v-if="btn_menu_x"><i class="fas fa-times"></i></p>
 			<a href="index.html">Home</a>
 			<a href="About.html">About</a>
 			<a href="shap.html">Shap</a>
 			<a href="Contact.html">Contact</a>
 		</div>	
-</div>
-	
-	<div class="contact_main02">
-				<h2>Contact Us</h2>
+	</div>
+	<div id="contact" class="contact_main02">
+		<h2>Contact Us</h2>
 		<div class="contact_span"></div>
-		<form class="contact_form" action="" method="post">
-			<input type="text" class="contact_form_input" placeholder="Your name">
-			<input type="email" class="contact_form_input" placeholder="Your email">
-			<input type="text" class="contact_form_input" placeholder="Your number">
-			<textarea class="contact_form_input" placeholder="Your message"></textarea>
-			<input type="submit" class="contect_form_submit" value="Send">
+		<form class="contact_form">
+			<div>
+				<input type="text" class="contact_form_input" placeholder="Your name" v-model="name">
+				<p class="contact_error" v-if="name_error"><i class="fas fa-times"></i></p>
+			</div>
+			<p class="err_msg" v-if="name_err_msg_show">{{name_err_msg}}</p>
+			<div>
+				<input type="email" class="contact_form_input" placeholder="Your email" v-model="email">
+				<p class="contact_error" v-if="email_error"><i class="fas fa-times"></i></p>
+			</div>
+			<p class="err_msg" v-if="e_err_msg_show">{{email_err_msg}}</p>
+			<div>
+				<input type="text" class="contact_form_input" placeholder="Your number" v-model="number">
+				<p class="contact_error" v-if="number_error"><i class="fas fa-times"></i></p>
+			</div>
+			<p class="err_msg" v-if="number_err_msg_show">{{number_err_msg}}</p>
+			<textarea class="contact_form_input" placeholder="Your message" v-model="msg"></textarea>
+			<input type="button" class="contect_form_submit" value="Send" @click="submit()">
 		</form>
 	</div>
 	<footer>
@@ -57,5 +71,8 @@
 			<p>What is Lorem Ipsum</p>
 		</div>
 	</footer>
+	
+	<script src="scirpt/vue/web_vueJs.js"></script>
+	
 </body>
 </html>
