@@ -19,7 +19,53 @@
 	opacity: 1;
 }
 
+#about_main01
+{
+	opacity: 0;
+	transition: all 0.6s ease-out;
+}
 
+#about_main01.fade_in
+{
+	opacity: 1;
+}
+
+#about_main02
+{
+	opacity: 0;
+	transition: all 0.6s ease-out;
+	padding-top: 0px;
+}
+
+#about_main02.fade_in
+{
+	opacity: 1;
+	padding-top: 30px;
+}
+
+#about_main03
+{
+	opacity: 0;
+	transition: all 0.6s ease-out;
+	padding-top: 0%;
+}
+
+#about_main03.fade_in
+{
+	opacity: 1;
+	padding-top: 10%;
+}
+
+#contact
+{
+ 	opacity: 0;
+	transition: all 0.6s ease-out;
+}
+
+#contact.fade_in
+{
+	opacity: 1;
+}
 
 
 
@@ -35,6 +81,7 @@ html , body
 	height: 100%;
 	letter-spacing: 3px;
 	word-wrap: break-word;
+	background-color: #E2E2E2;
 }
 
 p
@@ -472,12 +519,12 @@ footer
 	margin: 5% auto ;
 	background-image: url(../../img/about/about-img01.jpg);
 	background-size: cover;
+	background-position: 10% 20%;
 }
 
 .about_main01_text_div
 {
 	margin: 0px auto;
-	width: 90%;
 	padding: 0px 20px;
 	text-align: center;
 	margin-bottom: 10%;
@@ -507,7 +554,7 @@ footer
 	width: 100%;
 	height: 100%;
 	background-color:#171717;
-	padding-top: 50px;
+	z-index: 100;
 }
 
 .about_main02_card
@@ -549,6 +596,7 @@ footer
 	background-color:#f9f3f3;
 	padding-top: 10%;;
 	padding-bottom: 10%;
+	z-index: 50;
 }
 
 
@@ -589,7 +637,7 @@ footer
 }
 
 .about_main03_text_div > p
-{
+{	
 	font-size: 12px;
 	line-height: 20px;
 	margin: 40px auto;
