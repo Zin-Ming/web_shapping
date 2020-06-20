@@ -3,7 +3,7 @@
 
 var g_blue = Vue.component('g_blue',{
 
-	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-blue.png" alt=""></li><li> Ipsum_blue </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list blue"><ul><li><img src="./img/shap/glasses01-blue.png" alt=""></li><li> Ipsum_blue </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
@@ -40,7 +40,7 @@ var g_blue = Vue.component('g_blue',{
 	
 var g_red = Vue.component('g_red',{
 	
-	template:'<div class="glasses_list red"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-red.png" alt=""></li><li> Ipsum_red </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list red"><ul><li><img src="./img/shap/glasses01-red.png" alt=""></li><li> Ipsum_red </li><li>$ 1000 </li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
@@ -78,7 +78,7 @@ var g_red = Vue.component('g_red',{
 	
 var g_yellow = Vue.component('g_yellow',{
 	
-	template:'<div class="glasses_list yellow"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses01-yellow.png" alt=""></li><li> Ipsum_yellow </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list yellow"><ul><li><img src="./img/shap/glasses01-yellow.png" alt=""></li><li> Ipsum_yellow </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
@@ -119,7 +119,7 @@ var g_yellow = Vue.component('g_yellow',{
 	
 var v_blue = Vue.component('v_blue',{ 
 			
-	template:'<div class="glasses_list blue"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-blue.png" alt=""></li><li> variou_blue </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list blue"><ul><li><img src="./img/shap/glasses02-blue.png" alt=""></li><li> variou_blue </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
@@ -157,7 +157,7 @@ var v_blue = Vue.component('v_blue',{
 	
 var v_red = Vue.component('v_red',{	
 			
-	template:'<div class="glasses_list red"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-red.png" alt=""></li><li> variou_red </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list red"><ul><li><img src="./img/shap/glasses02-red.png" alt=""></li><li> variou_red </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
@@ -194,7 +194,7 @@ var v_red = Vue.component('v_red',{
 	
 var v_yellow = Vue.component('v_yellow',{
 			
-	template:'<div class="glasses_list yellow"><ul><li><img src="http://127.0.0.1:8887/img/shap/glasses02-yellow.png" alt=""></li><li> variou_yellow </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
+	template:'<div class="glasses_list yellow"><ul><li><img src="./img/shap/glasses02-yellow.png" alt=""></li><li> variou_yellow </li><li>$1000</li><li>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</li><li><div class="add_cart" @click="add()">Add cart</div></li></ul></div>',
 	
 	methods:{
 		
