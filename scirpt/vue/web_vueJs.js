@@ -9,7 +9,7 @@ var g_blue = Vue.component('g_blue',{
 		
 		add:function(item , id){
 			
-			var item = {id:1, name:'Ipsum_blue',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-blue.png'};
+			var item = {id:1, name:'Ipsum_blue',price:1000, count:1 ,imgUrl:'./img/shap/glasses01-blue.png'};
 			
 			var newcount = 1;
 			
@@ -46,7 +46,7 @@ var g_red = Vue.component('g_red',{
 		
 		add:function(item , id){
 			
-			var item = {id:2, name:'Ipsum_red',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-red.png'};
+			var item = {id:2, name:'Ipsum_red',price:1000, count:1 ,imgUrl:'./img/shap/glasses01-red.png'};
 			
 			var newcount = 1;
 			
@@ -85,7 +85,7 @@ var g_yellow = Vue.component('g_yellow',{
 		add:function(item , id){
 			
 			
-			var item = {id:3, name:'Ipsum_yellow',price:1000, count:1 ,imgUrl:'http://127.0.0.1:8887/img/shap/glasses01-yellow.png'};
+			var item = {id:3, name:'Ipsum_yellow',price:1000, count:1 ,imgUrl:'./img/shap/glasses01-yellow.png'};
 			
 			var newcount = 1;
 			
@@ -126,7 +126,7 @@ var v_blue = Vue.component('v_blue',{
 		add:function(item , id){
 			
 			
-			var item = {id:4,name:'variou_blue',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-blue.png'};
+			var item = {id:4,name:'variou_blue',price:1000 ,count:1 , imgUrl:'./img/shap/glasses02-blue.png'};
 			
 			var newcount = 1;
 			
@@ -164,7 +164,7 @@ var v_red = Vue.component('v_red',{
 		add:function(item , id){
 			
 			
-			var item = {id:5,name:'variou_red',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-red.png'};
+			var item = {id:5,name:'variou_red',price:1000 ,count:1 , imgUrl:'./img/shap/glasses02-red.png'};
 			
 			var newcount = 1;
 			
@@ -201,7 +201,7 @@ var v_yellow = Vue.component('v_yellow',{
 		add:function(item , id){
 			
 			
-			var item = {id:6,name:'variou_yellow',price:1000 ,count:1 , imgUrl:'http://127.0.0.1:8887/img/shap/glasses02-yellow.png'};
+			var item = {id:6,name:'variou_yellow',price:1000 ,count:1 , imgUrl:'./img/shap/glasses02-yellow.png'};
 			
 			var newcount = 1;
 			
